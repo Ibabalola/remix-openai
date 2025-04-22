@@ -1,4 +1,4 @@
-import type { ActionFunction, LoaderFunction, MetaFunction } from "@remix-run/node";
+import type { ActionFunction, MetaFunction } from "@remix-run/node";
 import { Form, useActionData, useNavigate } from "@remix-run/react";
 import { useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
@@ -16,11 +16,6 @@ export const meta: MetaFunction = () => {
     { name: "description", content: "Welcome to a Remix Open AI Application!" },
   ];
 };
-
-export const loader: LoaderFunction = async ({ request }: { request: Request }) => {
-
-  return Response.json({});
-}
 
 export const action: ActionFunction = async ({ request }: { request: Request }) => {
   const formData = await request.formData();
