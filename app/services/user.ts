@@ -12,6 +12,11 @@ export const addUser = (user: User) => {
     users.push(user);
   }
 };
-export const findUser = (id: string) => {}
+export const findUser = (id: string) => users.find((u: User) => u.id === id);
 export const findUserByEmailPassword = (email: string, password: string) => getUser(email, password);
-export const deleteUser = (id: string) => {};
+export const deleteUser = (id: string) => {
+  const index = users.findIndex((u: User) => u.id === id);
+  if (index !== -1) {
+    users.splice(index, 1);
+  }
+};

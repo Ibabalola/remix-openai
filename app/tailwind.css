@@ -41,4 +41,30 @@ body {
   .login-button:hover {
     @apply bg-blue-700;
   }
+
+  .profile-container {
+    @apply max-w-2xl mx-auto p-8 bg-white shadow-md rounded-lg mt-10;
+  }
+
+  .profile-title {
+    @apply text-3xl font-bold text-center mb-4;
+  }
+
+
+  .delete-button {
+    @apply bg-red-500 text-white font-bold py-2 px-4 rounded-md w-full mt-4;
+  }
+
+  .delete-button:hover {
+    @apply bg-red-700;
+  }
+
+  .logout-button {
+    @apply bg-gray-500 text-white font-bold py-2 px-4 rounded-md w-full mt-4;
+  }
+
+  .logout-button:hover {
+    @apply bg-gray-700;
+  }
+
 }
